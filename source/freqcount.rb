@@ -1,12 +1,11 @@
 class FreqCount
-    attr_accessor :s
-    def initialize(s) 
-        @s= s 
+    attr_accessor :str
+    def initialize(str) 
+        @str= str
       end
     def frequency
         response=Hash.new
-        s.each_char do |i|
-            puts i
+        str.each_char do |i|
             if response.include?(i)
                 response[i]=response[i]+1
             else
